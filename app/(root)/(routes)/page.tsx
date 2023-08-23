@@ -1,17 +1,11 @@
 "use client";
-import { UserButton, useAuth } from "@clerk/nextjs";
+
+import SearchInput from "@/components/search-input";
 
 export default function Example() {
-  const { isLoaded, userId, sessionId, getToken } = useAuth();
-
-  // In case the user signs out while on the page.
-  if (!isLoaded || !userId) {
-    return null;
-  }
-
   return (
-    <div>
-      <UserButton />
+    <div className="h-full p-4 space-y-2">
+      <SearchInput />
     </div>
   );
 }
