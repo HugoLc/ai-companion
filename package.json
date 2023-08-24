@@ -3,10 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
+    "dev": "npx next dev",
+    "build": "npx next build",
+    "start": "npx next start",
+    "lint": "npx next lint",
     "postinstall": "prisma generate"
   },
   "dependencies": {
@@ -41,7 +41,7 @@
     "langchain": "^0.0.92",
     "lucide-react": "^0.268.0",
     "next": "13.4.11",
-    "next-cloudinary": "^4.16.0",
+    "next-cloudinary": "^4.18.1",
     "next-themes": "^0.2.1",
     "openai": "^3.3.0",
     "openai-edge": "^1.2.2",
