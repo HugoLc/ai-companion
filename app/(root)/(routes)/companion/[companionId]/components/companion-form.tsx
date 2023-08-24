@@ -97,20 +97,20 @@ export const CompanionForm = ({
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     try {
-      // if (initialData) {
-      //   await axios.patch(`/api/companion/${initialData.id}`, values);
-      // } else {
-      //   await axios.post("/api/companion", values);
-      // }
+      if (initialData) {
+        await axios.patch(`/api/companion/${initialData.id}`, values);
+      } else {
+        await axios.post("/api/companion", values);
+      }
 
-      // toast({
-      //   description: "Success.",
-      //   duration: 3000,
-      // });
+      toast({
+        description: "Success.",
+        duration: 3000,
+      });
 
-      // router.refresh();
-      // router.push("/");
-      console.log({ values });
+      router.refresh();
+      router.push("/");
+      // console.log({ values });
     } catch (error) {
       toast({
         variant: "destructive",
