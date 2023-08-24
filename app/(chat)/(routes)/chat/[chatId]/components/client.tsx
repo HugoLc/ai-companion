@@ -55,17 +55,19 @@ export const ChatClient = ({ companion }: ChatClientProps) => {
   return (
     <div className="flex flex-col h-full p-4 space-y-2">
       <ChatHeader companion={companion} />
-      {/* <ChatMessages 
-        companion={companion}
+      {
+        <ChatMessages
+          companion={companion}
+          isLoading={isLoading}
+          messages={messages}
+        />
+      }
+      <ChatForm
         isLoading={isLoading}
-        messages={messages}
+        input={input}
+        handleInputChange={handleInputChange}
+        onSubmit={onSubmit}
       />
-      <ChatForm 
-        isLoading={isLoading} 
-        input={input} 
-        handleInputChange={handleInputChange} 
-        onSubmit={onSubmit} 
-      /> */}
     </div>
   );
 };
